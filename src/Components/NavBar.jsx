@@ -4,7 +4,7 @@ function NavBar() {
   return (
     <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="" className="navbar-brand">E-store</a>
+        <a href="" className="navbar-bran fw-bolder">E-store</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavbarCollapse">
             <span className="navbar-toggler-icon"></span>
         </button>

@@ -53,7 +53,7 @@ function NewProductForm() {
         />
 
         <label htmlFor="product-description"></label>
-        <textarea name="product-description" id="" cols="30" rows="10" onChange={(e)=>setProductDescription(e.target.value)}>Description</textarea>
+        <textarea name="product-description" id="" cols="30" rows="10" onChange={(e)=>setProductDescription(e.target.value)}>Description </textarea>
         <button type="submit">Create Product</button>     
 
       </form>

@@ -1,23 +1,35 @@
 import React from 'react'
 
-function Products({title, price, rating}) {
-  return (
-    <div>
-      <div className="container">
-        <div className='row'>
-          
-          <div className='col-md-4 d-flex'>
-          <div className='card shadow mx-5 pt-3'>
-            <h1 className='card-title'>{title}</h1>
-            <p className='card-text'>{price}</p>
-            
-        </div>
-          </div>
-        </div>
-        
-      </div>
+function Products({onfilterProducts, title, price, rating, image}) {
 
+
+ 
+
+ 
+  return (
+    <div className="container">
+      
+
+      <div className='row'>
+
+      <div className='col-md-3'>
+      <div className="card shadow mb-3 h-100" style={{width: "18rem"}}>
+      <img src={image} className="card-img-top" height={"250px"} alt={title}/>
+      <div className="card-body">
+      <h5 className="card-title">{title}</h5>
+      <p className="card-text fw-bolder">$ {price}</p>
+      <p className="card-text">{rating}</p>
+      <button className='btn btn-primary'>Buy Now</button>
+      </div>
+      
+     
+     </div>
     </div>
+
+      </div>
+      
+
+</div>
   )
 }
 

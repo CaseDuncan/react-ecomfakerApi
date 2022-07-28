@@ -1,19 +1,21 @@
 import React from 'react'
+import ProductsPage from './ProductsPage';
 
 function Home() {
   return (
     <div>
 
-      <div class="card mb-3 mt-5 border-0">
-      <div class="card bg-dark text-white">
-      <img src="/assets/matisho.jpg" class="card-img" height={"550px"} alt="..."/>
-      <div class="card-img-overlay">
-      <h5 class="card-title fw-bolder display-2">NEW SEASONS ARRIVAL</h5>
-      <p class="card-text lead fs-5">CHECK OUT ALL THE TRENDS.</p>
+      <div className="card mb-3 mt-5 border-0">
+      <div className="card bg-dark text-white">
+      <img src="/assets/matisho.jpg" className="card-img" style={{height : "550px"}} alt="..."/>
+      <div className="card-img-overlay">
+      <h5 className="card-title fw-bolder display-2">NEW SEASONS ARRIVAL</h5>
+      <p className="card-text lead fs-5 fw-bolder display-4">CHECK OUT ALL THE TRENDS.</p>
     
   </div>
 </div>
 </div>
+<ProductsPage/>
 </div>
   )
 }
