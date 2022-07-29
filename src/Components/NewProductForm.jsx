@@ -5,37 +5,29 @@ function NewProductForm() {
     const[productName, setProductName] = useState('')
     const[productDescription, setProductDescription] = useState('')
     const[productCategory, setProductCategory] = useState('')
+    const[price, setPrice] = useState('')
+    const[imageUrl, setImageUrl]= useState('')
+    const[rating, setRating]= useState('')
 
     // function to handle new prouct creation
     function handleSubmit(e){
         e.preventDefault();
 
         // product object
-        newProduct ={
-            productName,
-            imageUrl,
-            productCategory,
-            productDescription
-        }
+      const productobj = {productName,imageUrl, productCategory,price, productDescription,rating }
+      console.log(productobj)
+        
 
-        // useEffect Hook to fetch data from the API
-
-        useEffect(()=>{
-            fetch("", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(newProduct)
-            })
+        // fetch data from the API
+        fetch("https://fakestoreapi.com/products", {
+          method: "POST",
+          headers:{
+            "Content-Type": "application/json"
+          },
+          body:JSON.stringify(productobj)
         })
-        .then((response)=>response.json())
+        
     }
-    function handleChange(e){
-        e.preventDefault();
-        setProductName()
-    }
-    // change state 
    
   return (
     <div>
@@ -45,11 +37,24 @@ function NewProductForm() {
         type="text"
         name="product-name"
         id="product-name"
-        onChange={handleChange}
+        onChange={(e)=>setProductName(e.target.value)}
         />
         <label htmFor="imageUrl">Product Image</label>
         <input type="text"
         name="imageUrl"
+        onChange={(e)=>setImageUrl(e.target.value)}
+        />
+        
+        <label htmFor="price">Price</label>
+        <input type="number"
+        name="price"
+        onChange={(e)=>setPrice(e.target.value)}
+        />
+
+        <label htmFor="rating">Rating</label>
+        <input type="number"
+        name="rating"
+        onChange={(e)=>setRating(e.target.value)}
         />
 
         <label htmlFor="product-description"></label>
@@ -61,4 +66,4 @@ function NewProductForm() {
   )
 }
 
-export default NewProductForm
+export default NewProductForm;
