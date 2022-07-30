@@ -17,12 +17,12 @@ function NavBar() {
                 <li className="nav-item">
                     <Link to={'/products'} className="nav-link">Products</Link>
                 </li>
-                {/* <li className="nav-item">
-                    <Link to="/about" className="nav-link">About</Link>
+                <li className="nav-item">
+                    <Link to={'/products/new-product'} className="nav-link">New Product</Link>
                 </li>
                 <li className="nav-item">
                     <Link to="/contact" className="nav-link">Contact</Link>
-                </li> */}
+                </li>
                 </ul>
 
            </div>

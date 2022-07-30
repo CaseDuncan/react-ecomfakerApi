@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react'
 
-function NewProductForm() {
+function NewProductForm({ohandleAddProduct}) {
 
-    const[productName, setProductName] = useState('')
-    const[productDescription, setProductDescription] = useState('')
-    const[productCategory, setProductCategory] = useState('')
+    const[title, setTitle] = useState('')
+    const[description, setDescription] = useState('')
+    const[category, setCategory] = useState('')
     const[price, setPrice] = useState('')
-    const[imageUrl, setImageUrl]= useState('')
+    const[image, setImage]= useState('')
     const[rating, setRating]= useState('')
 
     // function to handle new prouct creation
@@ -14,8 +14,8 @@ function NewProductForm() {
         e.preventDefault();
 
         // product object
-      const productobj = {productName,imageUrl, productCategory,price, productDescription,rating }
-      console.log(productobj)
+      const productobj = {title,image, price, description, rating }
+      
         
 
         // fetch data from the API
@@ -26,42 +26,68 @@ function NewProductForm() {
           },
           body:JSON.stringify(productobj)
         })
-        
+        .then((response)=>response.json())
+        .then((newProduct)=>ohandleAddProduct(newProduct))
+       
     }
    
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="product-name">Product Name</label>
+      <div className='container'>
+        <div className="row">
+          <div className='col-md-3'></div>
+          <div className='col-md-3 mt-3'>
+            <h3 className='text-center'>New Product</h3>
+          <form onSubmit={handleSubmit}>
+        <div className='form-group'>
+        <label htmlFor="title">Product Name</label>
         <input 
         type="text"
-        name="product-name"
+        className='form-control'
+        name="title"
         id="product-name"
-        onChange={(e)=>setProductName(e.target.value)}
+        onChange={(e)=>setTitle(e.target.value)}
         />
-        <label htmFor="imageUrl">Product Image</label>
+        </div>
+        <div className='form-group'>
+        <label htmlFor="image">Product Image</label>
         <input type="text"
-        name="imageUrl"
-        onChange={(e)=>setImageUrl(e.target.value)}
+        className='form-control'
+        name="image"
+        onChange={(e)=>setImage(e.target.value)}
         />
+        </div>
         
-        <label htmFor="price">Price</label>
+        <div className='form-group'>
+        <label htmlFor="price">Price</label>
         <input type="number"
+        className='form-control'
         name="price"
         onChange={(e)=>setPrice(e.target.value)}
         />
+        </div>
 
-        <label htmFor="rating">Rating</label>
+        <div className='form-group'>
+        <label htmlFor="rating">Rating</label>
         <input type="number"
+        className='form-control'
         name="rating"
         onChange={(e)=>setRating(e.target.value)}
         />
+        </div>
 
-        <label htmlFor="product-description"></label>
-        <textarea name="product-description" id="" cols="30" rows="10" onChange={(e)=>setProductDescription(e.target.value)}>Description </textarea>
-        <button type="submit">Create Product</button>     
+        {/* <div className='form-group'>
+        <label htmlFor="product-description">Description</label>
+        <textarea name="product-description" className='form-control' 
+        onChange={(e)=>setProductDescription(e.target.value)}>Description </textarea>
+        </div> */}
+        <button type="submit" className='btn btn-outline-dark'>Create Product</button>     
 
       </form>
+          </div>
+        </div>
+      </div>
+      
     </div>
   )
 }
