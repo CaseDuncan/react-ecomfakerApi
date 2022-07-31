@@ -35,9 +35,10 @@ function ProductsPage() {
     title={product.title}
     image={product.image}
     price={product.price}
-    onhandleAddProduct={handleAddProduct}
+    onandleAddProduct={handleAddProduct}
     />
    ))
+
 
   return (
     <div>
