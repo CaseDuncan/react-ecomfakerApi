@@ -4,7 +4,6 @@ import Products from './Products'
 
 function ProductsPage() {
     const[products, setProducts] = useState([])
-    const[isLoading, setIsLoading] = useState(false)
     const[filter, setFilter] = useState('')
 
     useEffect(()=>{
@@ -14,7 +13,6 @@ function ProductsPage() {
         .then((data)=>{
           setProducts(data)
           setFilter(data)
-          setIsLoading(false)
         })
         
     }, [filter])

@@ -3,7 +3,6 @@ import NavBar from "./Components/NavBar"
 import Home from "./Components/Home"
 import ProductsPage from './Components/ProductsPage';
 import ProductDetails from  './Components/ProductDetails'
-import Products from './Components/Products';
 import NewProductForm from './Components/NewProductForm'
 import {Routes, Route} from 'react-router-dom'
 

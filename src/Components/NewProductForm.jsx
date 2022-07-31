@@ -1,10 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 
 function NewProductForm({ohandleAddProduct}) {
 
     const[title, setTitle] = useState('')
-    const[description, setDescription] = useState('')
-    const[category, setCategory] = useState('')
     const[price, setPrice] = useState('')
     const[image, setImage]= useState('')
     const[rating, setRating]= useState('')
@@ -75,12 +73,6 @@ function NewProductForm({ohandleAddProduct}) {
         onChange={(e)=>setRating(e.target.value)}
         />
         </div>
-
-        {/* <div className='form-group'>
-        <label htmlFor="product-description">Description</label>
-        <textarea name="product-description" className='form-control' 
-        onChange={(e)=>setProductDescription(e.target.value)}>Description </textarea>
-        </div> */}
         <button type="submit" className='btn btn-outline-dark'>Create Product</button>     
 
       </form>
