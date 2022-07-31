@@ -14,7 +14,7 @@ function Products({image, title, price}) {
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
             <p className="card-text fw-bolder">$ {price}</p>
-            <button className='btn btn-primary'>Delete</button>
+            <button className='btn btn-primary'>Buy Now</button>
             </div>
             </div>
             </div>

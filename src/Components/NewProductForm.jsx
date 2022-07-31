@@ -12,7 +12,7 @@ function NewProductForm({ohandleAddProduct}) {
         e.preventDefault();
 
         // product object
-      const productobj = {title,image, price, description, rating }
+      const productobj = {title,image, price, rating }
       
         
 
