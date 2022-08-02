@@ -43,6 +43,8 @@
   "devDependencies": {
     "gh-pages": "^4.0.0"
   },
-  "engines": { "node": "v16.15.0",
- "npm": "8.5.5"} 
+  "engines": {
+    "node": "v16.15.0",
+    "npm": "8.5.5"
+  }
 }
