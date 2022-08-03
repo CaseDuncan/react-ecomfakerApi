@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-ecomfakerApi/static/css/main.bf675224.css",
+    "main.js": "/react-ecomfakerApi/static/js/main.9a321539.js",
+    "static/js/787.498bdabb.chunk.js": "/react-ecomfakerApi/static/js/787.498bdabb.chunk.js",
+    "index.html": "/react-ecomfakerApi/index.html",
+    "main.bf675224.css.map": "/react-ecomfakerApi/static/css/main.bf675224.css.map",
+    "main.9a321539.js.map": "/react-ecomfakerApi/static/js/main.9a321539.js.map",
+    "787.498bdabb.chunk.js.map": "/react-ecomfakerApi/static/js/787.498bdabb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf675224.css",
+    "static/js/main.9a321539.js"
+  ]
+}
